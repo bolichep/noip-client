@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://www.noip.com/integrate/request -->
+<html lang="en" class="" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta -->
+<title>
+        Request Method - No-IP
+</title>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#8fbe00">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#8fbe00">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#8fbe00">
+<meta name="csrf-token" content="SsqsAldkb4epGtezh7b7RHMY9PDhpYoAu2K6Of3Y">
+<meta name="Description" content="    No-IP API Request Method for performing a dynamic dns (ddns) update.
+">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" type="image/x-icon" href="https://d2np5nlsc31ci5.cloudfront.net/assets/img/2013/favicon.ico">
+<meta name="google-site-verification" content="d6ZuhcRwmTne8zgIB3C_bEqKNGQ-GlITAuRmJN_PPe8">
+
+<link rel="alternate" hreflang="en" href="https://www.noip.com/integrate/request">
+            <link rel="alternate" hreflang="pt-BR" href="https://www.noip.com/pt-BR/integrate/request">
+            <link rel="alternate" hreflang="it-IT" href="https://www.noip.com/it-IT/integrate/request">
+    
+<link rel="canonical" href="https://www.noip.com/integrate/request">
+<!-- Stylesheets -->
+
+<!-- Note: Preload keyword to initiate early, high-priority, and non-render-blocking fetch of a CSS resource -->
+<link rel="preload" href="./Request Method - No-IP_files/shortstar.css" as="style">
+<link type="text/css" rel="stylesheet" href="./Request Method - No-IP_files/shortstar.css" media="all">
+
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="//d2np5nlsc31ci5.cloudfront.net/assets/css/common-ie-7.css" />
+<![endif]-->
+
+
+<!-- Webmaster Tracking -->
+<meta name="verify-v1" content="Evj0S/5nXT8im6UiONhxHRe47Lc9F1K9D19/Qtx5/a4=">
+<!-- Bing Tracking -->
+<meta name="msvalidate.01" content="3293A604B63B22FA33ACD8EB379EECEF">
+<!-- GOOGLE Optimize Tracking Code -->
+<style>.async-hide
+{ opacity: 0 !important}
+</style>
+<script type="text/javascript" async="" src="./Request Method - No-IP_files/analytics.js"></script><script type="text/javascript" async="" src="./Request Method - No-IP_files/js"></script><script type="text/javascript" async="" src="./Request Method - No-IP_files/ec.js"></script><script async="" src="./Request Method - No-IP_files/gtm.js"></script><script async="" src="./Request Method - No-IP_files/analytics.js"></script><script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function()
+{s.className=s.className.replace(RegExp(' ?'+y),'')}
+;
+(a[n]=a[n]||[]).hide=h;setTimeout(function()
+{i();h.end=null}
+,c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-K6GQWBT':true}
+);</script>
+
+<!-- GOOGLE Tracking -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+{ (i[r].q=i[r].q||[]).push(arguments)}
+,i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-31174-1', 'noip.com');
+ga('require', 'displayfeatures');
+ga('require', 'GTM-K6GQWBT');
+ga('send', 'pageview');
+ga('create', 'UA-31174-14', 'noip.com', {'name': 'eeTracking'});
+ga('eeTracking.require', 'displayfeatures');
+ga('eeTracking.require', 'GTM-K6GQWBT');
+ga('eeTracking.require', 'ec');
+ga('eeTracking.send', 'pageview');
+</script>
+<!-- GOOGLE TRANSLATE -->
+<meta name="google-translate-customization" content="68d99b5dd94adcf8-8ed988bda350a97e-ge4215c1cbcd796f0-d">
+
+<script type="text/javascript" src="./Request Method - No-IP_files/5913.js" async="async"></script>
+<script src="./Request Method - No-IP_files/f.txt"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="./Request Method - No-IP_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./Request Method - No-IP_files/main.js"></script><script type="text/javascript" charset="UTF-8" src="./Request Method - No-IP_files/element_main.js"></script></head>
+
+<body style="position: relative; min-height: 100%; top: 0px;">
+
+<div id="outdated" style="color:#ffffff;"> <h6 style="color:#ffffff;">Your browser is out of date!</h6>
+ <p style="color:#ffffff;">Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+ <p class="last"><a href="https://www.noip.com/integrate/request#" id="btnCloseUpdateBrowser" title="Close">×</a></p>
+</div>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-VFGB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-VFGB');</script>
+<!-- End Google Tag Manager -->
+
+<section id="way-header-wrap" class="way-header way-header-hide">
+  <div class="container">
+    <nav id="way-nav" class="clearfix">
+      <!-- Logo -->
+      <a id="logo" class="grey way-logo" href="https://www.noip.com/" title="No-IP - Managed DNS Service Provider"></a>
+      <a class="nav-link" href="https://www.noip.com/remote-access">Dynamic DNS</a>
+      <a class="nav-link" href="https://www.noip.com/managed-dns">Managed DNS</a>
+      <a class="nav-link" href="https://www.noip.com/domains">Domains</a>
+      
+      <div class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="https://www.noip.com/integrate/request#">Services</a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li><a href="https://www.noip.com/managed-access" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;managed-access&#39;);">Managed Access</a></li>
+          <li><a href="https://www.noip.com/managed-mail" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;service-email&#39;);">Email</a></li>
+          <li><a href="https://www.noip.com/server-monitoring" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;service-monitoring&#39;);">Monitoring</a></li>
+          <li><a href="https://www.noip.com/ssl-certificates" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;service-ssl-certificates&#39;);">SSL Certificates</a></li>
+        </ul>
+      </div>
+      
+      <a class="nav-link" href="https://www.noip.com/why-us">Why Us?</a>
+      <a class="nav-link" href="https://www.noip.com/support">Support</a>
+      <a class="pb-cart" rel="nofollow" role="button" data-toggle="modal" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;way-navigation&#39;, &#39;button&#39;, &#39;view-cart&#39;);"><span class="badge-cart-items way">0</span></a>
+          <a class="signup grey hidden-sm" href="https://www.noip.com/logout">Log Out</a>
+      
+      
+          <button id="login-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#way-main-navbar-collapse">
+        <i class="navbar-icon fa fa-user"></i>
+      </button>
+    </nav>
+  </div>
+    <!-- Account Info section dropdown -->
+        <div id="way-main-navbar-collapse" class="main-navbar-collapse collapse account-navbar hidden-md hidden-lg hidden-xs" aria-expanded="false">
+          <div class="right clearfix">
+            <ul class="nav navbar-nav pull-right right-navbar-nav">
+            <li>
+                <a class="" href="https://www.noip.com/integrate/request#localizationModal" rel="nofollow" role="button" data-toggle="modal">
+                <i class="noip-icons-globe-1"></i>
+                Language
+                </a>
+            </li>
+              <li class="dropdown">
+                <a href="https://www.noip.com/integrate/request#" class="dropdown-toggle user-menu" data-toggle="dropdown">
+                       <i class="nnavbar-icon fa fa-user"></i>
+                       Logged In as:
+                                        evilbaal
+                                      </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                        <a href="https://www.noip.com/redirect/mynoip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;mininav-username&#39;);"><i class="nnavbar-icon fa fa-user"></i> My Account</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                  <a id="nav-button" class="" href="https://www.noip.com/logout" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;mininav-sign-out&#39;);"><i class="fa fa-sign-out"></i>Log Out</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <!-- End Account Info section -->
+  </section>
+<!-- Top Nav -->
+<section id="top-nav-wrap" class="top-nav">
+    <div class="container clearfix">
+        <ul id="topnav" class="fltright hidden-xs">
+
+          
+            <li class="top-nav-icon">
+              <a class="logged-in" href="https://www.noip.com/logout" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;sign-out&#39;);">Log Out</a>
+            </li>
+            <li class="top-nav-icon pb-cart">
+            <div class="nav-link dropdown pb-dropdown mini-nav-hide">
+              <a class="cart nav-link dropdown-toggle" href="https://www.noip.com/integrate/request#" data-toggle="dropdown" rel="nofollow" role="button" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;button&#39;, &#39;view-cart&#39;);"><span class="badge-cart-items">0</span></a>
+            </div>
+            </li>
+
+            <li class="top-nav-icon">
+              <a href="https://www.noip.com/integrate/request#localizationModal" rel="nofollow" role="button" data-toggle="modal" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;locale-selection-signed-in&#39;);">
+                <i class="noip-icons-globe-1"></i>
+                Language
+              </a>
+            </li>
+
+            <li><a href="https://www.noip.com/contact" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;contact-signed-in&#39;);">Contact</a></li>
+            <li><a href="https://www.noip.com/download" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;download-signed-in&#39;);">Download</a></li>
+            <li><a href="https://www.noip.com/members/dns" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;managed-dns-signed-in&#39;);">Managed DNS</a></li>
+            <li><a href="https://www.noip.com/members/dns/manage_domains" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;manage-domains-signed-in&#39;);">Manage Domains</a></li>
+            <li><a href="https://www.noip.com/redirect/mynoip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;my-account&#39;);">My Account</a></li>
+
+                    </ul>
+
+        
+
+        
+        <nav id="top-nav-mini" class="clearfix hidden-md hidden-lg pt-md-10 pb-md-10">
+            <button data-target="#navigation" type="button" id="main-menu-toggle" data-toggle="collapse" class="navbar-toggle collapsed"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
+            
+            <div class="navbar-inner">
+              <div class="navbar-header">
+                <a href="https://www.noip.com/integrate/request#" class="navbar-brand"></a>
+                <a id="pb-cart-button" class="pb-cart" rel="nofollow" role="button" data-toggle="modal" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;way-navigation&#39;, &#39;button&#39;, &#39;view-cart&#39;);"><span class="badge-cart-items way">0</span></a>
+                <button id="login-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse">
+                  <i class="navbar-icon fa fa-user"></i>
+                </button>
+              </div>
+            </div>
+            <!-- Account Info section -->
+            <div id="main-navbar-collapse" class="navbar-collapse collapse main-navbar-collapse" aria-expanded="false">
+              <div class="right clearfix">
+                <ul class="nav navbar-nav pull-right right-navbar-nav">
+                <li>
+                    <a class="" href="https://www.noip.com/integrate/request#localizationModal" rel="nofollow" role="button" data-toggle="modal">
+                    <i class="noip-icons-globe-1"></i>
+                    Language
+                    </a>
+                </li>
+                  <li class="dropdown">
+                    <a href="https://www.noip.com/integrate/request#" class="dropdown-toggle user-menu" data-toggle="dropdown">
+                           <i class="nnavbar-icon fa fa-user"></i>
+                           Logged In as:
+                                                evilbaal
+                                              </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://www.noip.com/redirect/mynoip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;mininav-username&#39;);"><i class="nnavbar-icon fa fa-user"></i> My Account</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                      <a id="nav-button" class="" href="https://www.noip.com/logout" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;mininav-sign-out&#39;);"><i class="fa fa-sign-out"></i>Log Out</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <!-- End Account Info section -->
+        </nav>
+        
+        <h1 class="top hidden-sm hidden-xs"><i class="pull-left icon-user-1"></i>Logged In as: <a class="blue" href="https://www.noip.com/redirect/mynoip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;top-nav&#39;, &#39;click&#39;, &#39;mininav-username&#39;);">
+                    evilbaal
+                  </a></h1>
+
+                
+    </div>
+</section>
+<!-- / Top Nav -->
+<div class="container pb-cart-container logged-in way-header-hide">
+  <div id="mini-cart-container" class="mini-cart mini-cart-empty">
+  <div id="three-icon-loading" class="loader hidden">
+    <div class="loading-icons"><span></span><span></span><span></span></div>
+    <div class="full-width text-semibold">Loading</div>
+  </div>
+  <div class="mini-cart-empty-header">
+    
+    <span class="header">Your cart is empty</span>
+    <span class="body">Add a service to continue</span>
+  </div>
+  <a href="https://www.noip.com/integrate/request#" class="btn btn-success btn-os full-width disable" disabled="">Continue to Checkout</a>
+</div> <!--end container -->
+  <div id="cartCsrfToken" data-token="SsqsAldkb4epGtezh7b7RHMY9PDhpYoAu2K6Of3Y "></div>
+  <input type="hidden" name="_baseUrl" value="https://www.noip.com">
+</div>
+
+<!--Templates for cart with items -->
+
+<template id="mini-cart-total-header"></template>
+
+<template id="mini-cart-list-item"></template>
+
+<template id="mini-cart-list-error"></template>
+
+<template id="mini-cart-list"></template>
+
+<template id="mini-cart-checkout-button"></template>
+
+<!--End of templates for cart with items-->
+
+<!--Templates for cart WITHOUT items -->
+<template id="mini-cart-empty-content"></template>
+<!--End of templates for cart WITHOUT items-->
+
+<script src="./Request Method - No-IP_files/mini-cart.js"></script>
+<header id="header" class=" clearfix">
+  <div class="header-container">
+
+    <!-- Navigation -->
+<section id="navigation" class="clearfix navbar-collapse collapse" aria-expanded="false">
+  <div class="container waypoint" data-animate-down="way-header-shrink" data-animate-up="way-header-hide">
+    <nav id="nav" class="mini-nav navmenu">
+      <a class="nav-link" href="https://www.noip.com/remote-access" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;mobile-nav&#39;, &#39;click&#39;, &#39;dynamic-dns&#39;);">Dynamic DNS</a>
+      <a class="nav-link" href="https://www.noip.com/managed-dns" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;mobile-nav&#39;, &#39;click&#39;, &#39;managed-dns&#39;);">Managed DNS</a>
+      <a class="nav-link" href="https://www.noip.com/domains" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;mobile-nav&#39;, &#39;click&#39;, &#39;domains&#39;);">Domains</a>
+      
+      <div class="nav-link dropdown mini-nav-hide">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="https://www.noip.com/domains">Services</a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">          
+          <li><a href="https://www.noip.com/managed-access" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;managed-access&#39;);">Managed Access</a></li>
+          <li><a href="https://www.noip.com/managed-mail" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;service-email&#39;);">Email</a></li>
+          <li><a href="https://www.noip.com/server-monitoring" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;service-monitoring&#39;);">Monitoring</a></li>
+          <li><a href="https://www.noip.com/ssl-certificates" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;service-ssl-certificates&#39;);">SSL Certificates</a></li>
+        </ul>
+      </div>
+      
+      <a class="mini-nav-show" href="https://www.noip.com/ssl-certificates" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;mobile-nav&#39;, &#39;click&#39;, &#39;ssl-certificates&#39;);">SSL Certificates</a>
+      <a class="mini-nav-show" href="https://www.noip.com/server-monitoring" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;mobile-nav&#39;, &#39;click&#39;, &#39;monitoring&#39;);">Monitoring</a>
+      <a class="mini-nav-show" href="https://www.noip.com/managed-mail" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;mobile-nav&#39;, &#39;click&#39;, &#39;email&#39;);">Email</a>
+      <a class="mini-nav-show" href="https://www.noip.com/managed-access" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;mobile-nav&#39;, &#39;click&#39;, &#39;managed-access&#39;);">Managed Access</a>
+      
+      <a class="nav-link" href="https://www.noip.com/why-us" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;why-us&#39;);">Why Us?</a>      
+      <a class="nav-link" href="https://www.noip.com/support" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;navigation&#39;, &#39;click&#39;, &#39;support&#39;);">Support</a>
+      
+                  
+    </nav>
+    <!-- Logo -->
+    <a id="logo" class="grey home" href="https://www.noip.com/" title="No-IP - Managed DNS Service Provider"></a>
+  </div>
+</section>
+<!-- / Navigation -->
+    
+  </div>
+</header>
+
+<section id="content" class="waypoint" data-animate-down="way-header-shrink" data-animate-up="way-header-hide">
+
+<!-- Page Title ================================================== -->
+<section class="greywrap header">
+    <div class="container">
+        <h1 class="blue">Request Method<i class="pull-right icon-cw"></i></h1>
+        <p class="nomarg">Adding No-IP Dynamic DNS support to your product is easy. When your update client detects an IP address change it should make an update request to our server. This page goes into detail about how to submit a dynamic dns update request.</p>
+    </div>
+</section>
+<!-- / Page Title -->
+
+<!-- Intro -->
+<section id="page-intro" class="greywrap">
+    <article class="container">
+        <div class="row">
+            <div class="col-sm-12 center">
+                <h4>The update protocol.</h4>
+                <h2>Our protocol is in an open format used by other service providers.</h2>
+                <p class="nomarg">The open protocol has been altered by adding a few additional parameters to enhance the No-IP experience. Moving to an open format well help system integrators deploy the No-IP service in their products without having to manage different update methods. If a system already uses the open protocol a simple change of the server name is all that is needed. </p>
+            </div>
+        </div>
+    </article>
+</section>
+
+<!-- Content Wrapper ================================================== -->
+<section id="content-wrap" class="whitewrap">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-6">
+
+                <h3>Sending an Update</h3>
+                <p>Dynamic updates are performed by making an http request to one of the following URLs:</p>
+
+                <p><b>http://dynupdate.no-ip.com/nic/update</b><br>
+                - - -<br>
+                <b>https://dynupdate.no-ip.com/nic/update</b></p>
+
+                <p><b> base64-encoded-auth-string</b> should be the <a href="http://en.wikipedia.org/wiki/Base64">base64 encoding</a> of username:password.  Un-encoded strings are accepted as well.</p>
+
+            </div>
+
+            <div class="col-sm-6">
+
+                <p>An example update request string</p>
+                <pre>http://username:password@dynupdate.no-ip.com/nic/update?hostname=mytest.testdomain.com&amp;myip=1.2.3.4</pre>
+
+                <p>An example basic, raw HTTP header GET request</p>
+                <pre class="unselectable">GET /nic/update?hostname=mytest.testdomain.com&amp;myip=1.2.3.4 HTTP/1.0
+Host: dynupdate.no-ip.com
+Authorization: Basic base64-encoded-auth-string
+User-Agent: Bobs Update Client WindowsXP/1.2 bob@somedomain.com
+                </pre>
+
+            </div>
+
+            <div class="col-sm-6 topmarg">
+
+                <h3>Important: Setting the Agent</h3>
+                <p>When making an update it is important that your http request  include an HTTP User-Agent to help
+                No-IP identify different clients that access the system.  Clients that do not
+                supply a User-Agent risk being blocked from the system.</p>
+
+            </div>
+
+            <div class="col-sm-6 topmarg">
+
+                <p>Your user agent should be in the following format</p>
+                <pre class="unselectable"><code>User-Agent: NameOfUpdateProgram/VersionNumber maintainercontact@domain.com</code></pre>
+
+                <p>User Agent is important! It helps us identify what Update Client is accessing us. This allows us to help YOUR USERS better. It should be in the following format:</p>
+                <pre class="unselectable"><code>User-Agent:<br>(UpdateProgram)<br>/<br>(VersionNumber)<br>(MaintainerEmail)<br><br>For example:<br>Update Program: Bobs Update Client WindowsXP<br>Version Number: v1.2<br>Maintainer Email: maintainer@domain.com<br><br>Would look like:<br>User-Agent: Bobs Update Client WindowsXP/v1.2 maintainer@domain.com</code></pre>
+
+            </div>
+
+            <div class="col-sm-12 topmarg">
+
+
+                <h3>URI Parameters</h3>
+
+                <table class="table table-bordered">
+
+                    <tbody><tr>
+                        <td>Field</td><td>Description</td>
+                    </tr>
+
+                    <tr>
+                        <td>username:password</td>
+                        <td>Required</td>
+                        <td>Username and password associated with the hosts that are to be updated.  No-IP uses an email address as the username.  Email addresses will be no longer than 50 characters.</td>
+                    </tr>
+
+                    <tr>
+                        <td>hostname</td>
+                        <td>Required</td>
+                        <td>The hostname(s) (host.domain.com) or group(s) (group_name) to be updated . <br> If updating multiple hostnames or groups use a comma separated list.  <b>hostname=host1.domain.com,group1,host2.domain.com</b>. Results are returned in the order you submitted them to the API per line.</td>
+                    </tr>
+
+                    <tr>
+                        <td>myip</td>
+                        <td>Optional</td>
+                        <td>The IP address to which the host(s) will be set.  If no IP address is supplied the WAN address connecting to our system will be used.  Clients behind NAT, for example, would not need to supply an IP address</td>
+                    </tr>
+
+                    <tr>
+                        <td>offline</td>
+                        <td>Optional</td>
+                        <td>Sets the current host to offline status. Offline settings are an Enhanced / No-IP Plus feature. When offline mode is enabled, the host will use whatever offline method is selected on the No-IP.com website for that host. Possible values are YES and NO with default of NO. If an update request is performed on an offline host, the host is removed from the offline state.</td>
+                    </tr>
+
+                </tbody></table>
+
+                <p>The following parameters are deprecated and are mentioned here for backwards compatibility.  Submitting them will not generate errors, but will have no effect to the update.</p>
+
+                <table class="table table-bordered">
+
+                    <tbody><tr>
+                        <td>system</td>
+                        <td>Unsupported</td>
+                        <td>This parameter is unsupported. Submitting this parameter will be ignored and will not generate errors.</td>
+                    </tr>
+
+                    <tr>
+                        <td>mx</td>
+                        <td>Unsupported</td>
+                        <td>This parameter is unsupported. Submitting this parameter will be ignored and will not generate errors.</td>
+                    </tr>
+
+                    <tr>
+                        <td>wildcard</td>
+                        <td>Unsupported</td>
+                        <td>This is an unsupported feature.  No error will be generated if supplied.  If a No-IP end user selects the wildcard options via the No-IP website for host.domain.com both host.domain.com and *.host.domain.com will be updated</td>
+                    </tr>
+
+                    <tr>
+                        <td>backmx</td>
+                        <td>Unsupported</td>
+                        <td>This parameter is unsupported. Submitting this parameter will be ignored and will not generate errors.</td>
+                    </tr>
+
+                </tbody></table>
+
+            </div>
+
+            <div class="col-sm-12 topmarg">
+                <p>Your update client should only send a request to our system when it detects an IP address change. This can be done by monitoring the local interface for IP address changes, checking for DHCP lease renewals,  monitoring the routers IP WAN ip addresss, or when none of those options are available use our ip detection system.</p>
+                <p>Next you <b>MUST</b> <a href="https://www.noip.com/integrate/response">interpret the response code</a>. Update clients that do not properly respond to update return codes risk being blocked from our system.</p>
+                <p class="topmarg"><a class="button small bordered grey" href="https://www.noip.com/integrate">Previous Step: Integrate</a><a class="button small bordered" href="https://www.noip.com/integrate/response">Next Step: Interpret Response</a><a class="button small bordered grey" href="https://www.noip.com/integrate/certify">Step 4: Get Certified</a></p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- / Content Wrapper -->
+
+</section>
+
+<footer id="footer">
+  <div class="footer-wrap">
+    <!-- Sitemap -->
+    <section id="sitemap" class="container">
+        <div class="row">
+            <ul class="sitemap col-sm-2 pr-0">
+                <li class="header">Services</li>
+                <li><a href="https://www.noip.com/remote-access" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;dynamic-dns&#39;);">Dynamic DNS</a></li>
+                <li><a href="https://www.noip.com/managed-dns" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;managed-dns&#39;);">Managed DNS</a></li>
+                <li><a href="https://www.noip.com/managed-access" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;managed-access&#39;);">Managed Access</a></li>
+                <li><a href="https://www.noip.com/managed-mail" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;email&#39;);">Email</a></li>
+                <li><a href="https://www.noip.com/domains" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;domain-registration&#39;);">Domain Registration</a></li>
+                <li><a href="https://www.noip.com/server-monitoring" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;server-monitoring&#39;);">Server Monitoring</a></li>
+                <li><a href="https://www.noip.com/ssl-certificates" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;ssl-certificates&#39;);">SSL Certificates</a></li>
+                <li><a href="https://www.noip.com/sign-up" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;free-sign-up&#39;);">Free DDNS Sign Up</a></li>
+            </ul>
+            <ul class="sitemap col-sm-2 pr-0">
+                <li class="header">Support</li>
+                <li><a href="https://www.noip.com/support" rel="nofollow" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;knowledgebase&#39;);">Knowledgebase</a></li>
+                <li><a href="https://www.noip.com/support/knowledgebase/getting-started-with-no-ip-com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;getting-started&#39;);">Getting Started</a></li>
+                <li><a href="https://www.noip.com/support/faq/frequently-asked-questions/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;faq&#39;);">FAQ</a></li>
+                <li><a href="https://www.portchecktool.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;port-check&#39;);">Port Check</a></li>
+                <li><a href="https://www.noip.com/download" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;downloads&#39;);">Downloads</a></li>
+            </ul>
+            <ul class="sitemap col-sm-2 pr-0">
+                <li class="header">Company</li>
+                <li><a href="https://www.noip.com/about" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;about&#39;);">About No-IP</a></li>
+                <li><a href="https://www.noip.com/what-is-dns" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;what-is-dns&#39;);">What is DNS?</a></li>
+                <li><a href="https://www.noip.com/integrate" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;integrate&#39;);">Integrate</a></li>
+                <li><a href="https://www.noip.com/careers" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;careers&#39;);">Careers</a></li>
+                <li><a href="https://www.noip.com/contact" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;contact-us&#39;);">Contact Us</a></li>
+            </ul>
+            <ul class="sitemap col-sm-3 pr-0">
+                <li class="header">Stay Connected</li>
+                <li><a href="https://www.noip.com/blog" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;blog&#39;);">Blog Posts &amp; News</a></li>
+                <li><a href="https://www.noip.com/press" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;press&#39;);">Press &amp; Media</a></li>
+                <!-- / Social Links -->
+                <li class="social-icons clearfix">
+                    <a id="facebook-icon" class="social-icon clearfix" href="http://www.facebook.com/noipdns" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;facebook&#39;);"></a>
+                    <a id="twitter-icon" class="social-icon clearfix" href="http://www.twitter.com/noipcom" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;twitter&#39;);"></a>
+                    <a id="gplus-icon" class="social-icon clearfix" href="https://plus.google.com/116722693345711288337/posts" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;google-plus&#39;);"></a>
+                    <a id="youtube-icon" class="social-icon clearfix" href="http://www.youtube.com/noipDDNS" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;youtube&#39;);"></a>
+                </li>
+            </ul>
+            <ul id="footer-domsearch" class="sitemap col-sm-3 hidden-xs pl-0">
+                <li class="header">Register Your Domain</li>
+                <li class="para">Use the search box below to find the perfect domain.</li>
+                <li class="newsletter-form">
+                    <form id="domreg-footer" method="post" action="https://www.noip.com/domains">
+                        <input type="hidden" name="_token" value="SsqsAldkb4epGtezh7b7RHMY9PDhpYoAu2K6Of3Y">
+                        <div class="controls controls-row">
+                            <input class="col-sm-12 mb-15" type="text" name="domain" placeholder="Find a Domain Today">
+                            <button class="button small" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer-domain-search&#39;, &#39;button&#39;, &#39;search&#39;);">Search</button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- / Sitemap -->
+    <!-- Copyright -->
+    <section id="copyright" class="container">
+        <div class="row">
+            <p class="col-sm-9">
+                ©1999-2019 • No-IP.com • All Rights Reserved.
+                <a href="https://www.noip.com/legal/privacy">Privacy Policy</a> • <a href="https://www.noip.com/legal/tos">Terms of Service</a> • <a class="orange" href="https://www.noip.com/abuse">Report Abuse</a>
+                <br>
+                <span id="viewport-toggle" class="hidden-lg hidden-md hidden-desktop">
+                    <small>
+                      <a class="view-full-site" href="https://www.noip.com/integrate/request#">View Full Site</a>
+                      <a class="view-mobile-site hide" href="https://www.noip.com/integrate/request#">View Mobile Site</a>
+                    </small>
+                </span>
+                <span class="lightgrey">
+<small>
+ss@74fe45e 2019-01-11T22:24:26Z
+web03
+</small>
+</span>
+            </p>
+            <div class="col-xs-12 col-sm-3 col-md-3 pull-right">
+                <a href="https://www.noip.com/" id="logo-footer" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;footer&#39;, &#39;click&#39;, &#39;logo&#39;);"></a>
+            </div>
+        </div>
+    </section>
+    <!-- / Copyright -->
+  </div>
+</footer>
+
+<div id="cartModal" class="modal fade container-fluid" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-body">
+      
+    
+    <button type="button" class="close close-cart" data-dismiss="modal" aria-hidden="true" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;cartModal&#39;, &#39;click&#39;, &#39;x-close&#39;);">×</button>
+    <div id="cart-modal" class="row clearfix"></div>
+  </div>
+  <div id="cartCsrfToken" data-token="SsqsAldkb4epGtezh7b7RHMY9PDhpYoAu2K6Of3Y "></div>
+</div>
+
+<section id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Sign-In" aria-hidden="true">
+  <div class="modal-body">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Log In To Your Account</h3>
+    </div>
+    <div id="signin">
+      <form class="row" action="https://www.noip.com/login" method="post">
+          <input class="col-sm-12" type="text" name="username" placeholder="Username or Email" autofocus="autofocus">
+          <input class="col-sm-12" type="password" name="password" placeholder="Password" autocomplete="off">
+          <input type="hidden" name="submit_login_page" value="1">
+          <input type="hidden" name="Login" value="1">
+          <button type="submit" class="button pull-right">Log In</button>
+          <input type="hidden" name="_token" value="SsqsAldkb4epGtezh7b7RHMY9PDhpYoAu2K6Of3Y">
+          <a class="login-link" href="https://www.noip.com/forgot-password" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;sign-in-modal&#39;, &#39;click&#39;, &#39;forgot-password&#39;);">Forgot Password?</a>
+          <a class="login-link" href="https://www.noip.com/sign-up" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;sign-in-modal&#39;, &#39;click&#39;, &#39;create-account&#39;);">Create an Account</a>
+      </form>
+    </div>
+  </div>
+  
+</section>
+<!-- Sign In Modal -->
+<section id="localizationModal" class="localization-modal modal fade center" tabindex="-1" role="dialog" aria-labelledby="Select-Language" aria-hidden="true">
+	<div class="modal-body" tabindex="-1">
+	  <button type="button" class="modal-close-no-head close" data-dismiss="modal" aria-hidden="true">×</button>
+	  <h3>Please select your <span style="text-transform: lowercase;">Language</span></h3>
+	  <p><small>To view website content in your <span style="text-transform: lowercase;">Language</span>, please select an option below.</small></p>
+		<ul class="localization-modal-list">
+												<li><a class="button small tip" data-toggle="tooltip" data-placement="top" title="" href="https://www.noip.com/setlocale/en" lang="en" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;localization-modal&#39;, &#39;click&#39;, &#39;English&#39;);" data-original-title="">English</a></li>
+									<li><a class="button small tip" data-toggle="tooltip" data-placement="top" title="" href="https://www.noip.com/setlocale/pt-BR" lang="pt-BR" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;localization-modal&#39;, &#39;click&#39;, &#39;Português&#39;);" data-original-title="Estamos trabalhando para traduzir nosso site para português e ficar ainda mais fácil para vocês aproveitarem nossos excelentes serviços. Vocês podem perceber que algumas páginas ainda não estão traduzidas, mas a expectativa é que o projeto termine em breve! Enquanto isso, nós agradecemos a vocês pelo seu apoio constante.">Português</a></li>
+									<li><a class="button small tip" data-toggle="tooltip" data-placement="top" title="" href="https://www.noip.com/setlocale/it-IT" lang="it-IT" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;localization-modal&#39;, &#39;click&#39;, &#39;Italiano&#39;);" data-original-title="">Italiano</a></li>
+									</ul>
+		
+		<!-- GOOGLE TRANSLATE -->
+		<p class="clearfix nomarg">
+		  <span id="google_translate_element" class="common input-sm"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" style="display: inline;"><select class="goog-te-combo" aria-label="Language Translate Widget"><option value="">Select Language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="ko">Korean</option><option value="ku">Kurdish (Kurmanji)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="gd">Scots Gaelic</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>&nbsp;&nbsp;Powered by <span style="white-space:nowrap"><a class="goog-logo-link" href="https://translate.google.com/" target="_blank"><img src="./Request Method - No-IP_files/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></span>
+		</p>
+		 <!-- / GOOGLE TRANSLATE -->
+		 
+	</div>
+</section>
+<!-- / Sign In Modal -->
+
+<!-- Scripts ================================================== -->
+<script>window.prefix = '';window.locale = 'en';window.cart_messages = {"empty_cart":"<tr><td colspan=\"8\" class=\"text-center\">No more items in your cart. <a href=\"\/\">Return to our homepage<\/a> to read about our amazing services.<\/td><\/tr>","years":"Years"};window.messages = {"email_already_in_use":"Email address already in use","email_confirm_required":"Email confirmation is required","email_must_match":"Email addresses must match","email_required":"Email address is required","hostnames_only_letters_and_numbers":"Hostnames may only contain letters or numbers.","hostnames_max_length":"Hostnames may only be 19 characters for Free Accounts","hostname_is_required":"Hostname is required","invalid_email_address":"Invalid email address","password_6_characters":"Password must be at least 6 characters","password_is_required":"Password is required","password_no_spaces":"Password cannot contain spaces","special_chars_warning":"Note: Dynamic DNS enabled devices, such as routers, cameras, or DVR's, often do not allow special characters and limit password length for Dynamic DNS passwords. Please consider a different password if you intend to use Dynamic DNS with an integrated device, as these passwords must match. For more information, <a href=\"\/support\/knowledgebase\/no-ip-account-password-with-ddns-devices\/\" target=\"_blank\">click here<\/a>","the_free_hostname":"the free hostname","username_is_not_available":"Username is not available","username_required":"Username is required","username_restrictions":"Username must be 6-15 characters long and only contain a-z, 0-9, -, _","view_more":"view more","name":{"dnslabel":"Your hostname cannot contain symbols or is over the max character limit","max":"Your hostname must be less than :max characters","maxchar":"Invalid character"}};</script><!-- Note: Preload keyword to initiate early, high-priority, and non-render-blocking fetch of a SCRIPT resource -->
+<link rel="preload" href="./Request Method - No-IP_files/shortstar.js" as="script">
+<script src="./Request Method - No-IP_files/shortstar.js"></script>
+
+<script src="./Request Method - No-IP_files/f(1).txt" async=""></script>
+
+<script type="text/javascript" async="">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-31174-1'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="./Request Method - No-IP_files/f(2).txt" async=""></script>
+
+<!-- Google Code for All Visitors to Site Remarketing List -->
+<script type="text/javascript" async="">
+/* <![CDATA[ */
+var google_conversion_id = 1072685640;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "cL1PCIftvAMQyMS__wM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1072685640/?label=cL1PCIftvAMQyMS__wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Request Method - No-IP_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
